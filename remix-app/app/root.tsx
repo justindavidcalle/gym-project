@@ -5,6 +5,9 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import "@fontsource/lato/400.css";
+import './css/global.css'
+
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

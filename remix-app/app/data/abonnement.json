@@ -1,0 +1,17 @@
+{
+    "1":{
+        "name":"Free",
+        "description": "Probiere kostenlos unser Gym aus für 3 Tage!", 
+        "price": 0
+    },
+    "2":{
+        "name":"Gym",
+        "description": "Bringe deinen Körper auf das nächste Level!", 
+        "price": 500
+    },
+    "3":{
+        "name":"VIP",
+        "description": "Gym, Sauna, Pool, Coaching", 
+        "price": 1000
+    }   
+}
