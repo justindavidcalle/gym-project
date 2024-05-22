@@ -1,0 +1,25 @@
+{
+    "attentionCard":[
+        {
+            "title": "Gym",
+            "description": "Trainiere mit den besten Bodybuildern und Athleten, welche dich völlig unterstützen!"
+        },
+        {
+            "title": "Sauna",
+            "description": "Geniessen Sie nach einer harten Session im Gym eine angenehme Sauna und stärken Sie Ihr Immunsystem."
+
+        },
+        {
+            "title": "Massage",
+            "description": "Gönnen Sie sich eine entspannende Massage und lassen Sie den Alltagsstress hinter sich."
+        },
+        {
+            "title": "Pool",
+            "description": "Entspannen Sie sich im Pool und geniessen Sie die Ruhe und die frische Luft."
+        },
+        {
+            "title": "Coach",
+            "description": "Lassen Sie sich von unseren Coaches beraten und unterstützen, um Ihre Ziele zu erreichen."	
+        }
+    ]
+}

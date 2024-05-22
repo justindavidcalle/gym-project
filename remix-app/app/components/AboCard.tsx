@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from "@remix-run/react";
 
 interface AboCardProps {    
     abo: {
@@ -10,13 +11,18 @@ interface AboCardProps {
 
 const AboCard = (props: AboCardProps) => {
   const {name, description, price} = props.abo; 
+  const navigate = useNavigate();
+
+  const handleHomeButton = () => {
+    navigate('/');
+  };
 
   return (
     <div className='AboCard'>
       <h1>{name}</h1>
       <h2>{price} .-/Jahr</h2> 
       <p>{description}</p>
-      <button>Kaufen</button>
+      <button onClick={handleHomeButton}>Kaufen</button>
     </div>
   );
 };

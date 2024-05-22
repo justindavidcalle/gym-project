@@ -1,4 +1,14 @@
 import type { MetaFunction } from "@remix-run/node";
+import { useNavigate } from "@remix-run/react";
+import AttentionCard from "../components/AttentionCard";
+import indexData from "../data/index.json";
+import '../css/index.css';
+
+import imgGym from '../asset/gym.jpg';
+import imgSauna from '../asset/sauna.png';
+import imgMassage from '../asset/massage.jpeg';
+import imgPool from '../asset/pool.jpg';
+import imgCoach from '../asset/coach.jpg';
 
 export const meta: MetaFunction = () => {
   return [
@@ -8,34 +18,29 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const navigate = useNavigate(); // Move the hook to the top level
+
+  const img = [
+    imgGym,
+    imgSauna,
+    imgMassage,
+    imgPool,
+    imgCoach
+  ];
+
+  const handleAbobutton = () => {
+    navigate('/abonnement');
+  };
+
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
+    <div className="center">
+      <div className="container">
+        <button id="aboButton" onClick={handleAbobutton}>Hole ein Abo!</button>
+        <h1 id="title">Chicas Gym</h1>
+        {Object.entries(indexData.attentionCard).map(([key, value], index) => {
+          return <AttentionCard key={key} attentionCard={value} img={img[index]} />;
+        })}
+      </div>
     </div>
   );
 }
